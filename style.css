@@ -1,5 +1,6 @@
 html{
     margin:0;
+    background-size: cover;
     background-image: url(./images/background.JPG);
 }
 
@@ -9,6 +10,7 @@ body{
 }
 
 .header {
+    background-size: cover;
     margin: 10px 10px 10px 10px;
     height: 200px;
     text-align: left;
@@ -59,7 +61,7 @@ body{
     border-radius: 12px;
     width: 200px;
     text-align: center;
-    min-height: 100vh;
+
     overflow-y: auto;
     background: #fef;
     border: 1px solid #ccc;
