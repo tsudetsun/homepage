@@ -12,7 +12,9 @@ body{
 .header {
     background-size: cover;
     margin: 10px 10px 10px 10px;
-    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100% auto; /* 横幅に合わせて縦を自動調整 */
+    padding-bottom: 10px; /* ulの下まで余白を確保 */
     text-align: left;
     background-image: url(./images/header.JPG);
     padding: 0 0 5px 0;
@@ -20,16 +22,16 @@ body{
 }
 
 .header h1{
-    color: #fcc;
+    color: #d00;
     font-family: "BIZ UDPMincho", serif;
     font-size: 75px;
     padding: 30px;
     margin-bottom: 0;
     text-shadow:
-    -2px -2px 0 #400,
-    2px -2px 0 #400,   
-    -2px  2px 0 #400,
-    2px  2px 0 #400;
+    -2px -2px 0 #6998d6,
+    2px -2px 0 #6998d6,   
+    -2px  2px 0 #6998d6,
+    2px  2px 0 #6998d6;
 }
 
 .header ul{
@@ -61,7 +63,6 @@ body{
     border-radius: 12px;
     width: 200px;
     text-align: center;
-
     overflow-y: auto;
     background: #fef;
     border: 1px solid #ccc;
