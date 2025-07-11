@@ -3,7 +3,13 @@
         <meta charset="UTF-8">
         <title>TΔTのプロフィール</title>
         <link rel="stylesheet" href="./style.css">
-        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=DotGothic16&family=Hachi+Maru+Pop&family=Kosugi+Maru&display=swap&family=BIZ+UDPGothic&display=swap" rel="stylesheet">
+        <script>
+            fetch('head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.head.insertAdjacentHTML('beforeend', data);
+            });
+        </script>
     </head>
     <body>
         <div id="header"></div>

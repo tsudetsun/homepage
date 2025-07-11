@@ -13,48 +13,38 @@ body{
     background-size: cover;
     margin: 10px 10px 10px 10px;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     padding-bottom: 10px;
     text-align: left;
     background-image: url(./images/header.JPG);
     padding: 0 0 5px 0;
     border-radius: 12px;
+    background-position: center;
 }
 
 .header h1{
-    color: #0dd;
-    font-family: "BIZ UDPMincho", serif;
+    color: #d33;
+    font-family: "Klee One", cursive;
     font-size: 75px;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
+    margin-top: 0;
     margin-bottom: 0;
-    -webkit-text-stroke: 5px black;
+    -webkit-text-stroke: 5px #000;
     paint-order: stroke;
 }
 
-.header ul{
-    display: flex; 
-    justify-content: center; 
-    background-color: #e3ebff;
-    margin: 0 10px 0 10px;
-    padding: 5px 0;
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    font-family: "DotGothic16", sans-serif;
-    border: 2px solid #99d9ea;
-    list-style: none;
-    gap: 100px;
-}
-
-.header ul li {
-    display: inline;
-    font-weight: bold;
+.header h2{
+    color: #0dd;
+    font-family: "BIZ UDPMincho", serif;
+    font-size: 25px;
+    padding: 30px 30px 0 30px;
+    margin-bottom: 0;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke;
 }
 
 .header a{
     text-decoration: none;
-    color: 000;
 }
 
 .sub {
@@ -62,12 +52,12 @@ body{
     width: 200px;
     text-align: center;
     overflow-y: auto;
-    background: #fef;
-    border: 1px solid #777;
+    background: #fde;
+    border: 2px solid #777;
     padding: 16px 8px;
     float: right;
     margin: 0 10px 10px 10px;
-    font-family: "Hachi Maru Pop", cursive;
+    font-family: "Zen Kurenaido", sans-serif;
     font-weight: bold;
 }
 
@@ -83,7 +73,7 @@ body{
 }
 
 .sub h1{
-    font-family: "DotGothic16", sans-serif;
+    font-family: "BIZ UDPMincho", serif;
     font-size: 25px;
     padding: 0;
     margin: 2px;
@@ -112,8 +102,8 @@ img.count{
     border-radius: 12px;
     margin: 10px 235px 10px 10px;
     padding: 16px;
-    background-color: eeffff;
-    border: 1px solid #1900ff;
+    background-color: #ffffff;
+    border: 2px solid #555599;
     font-family: "BIZ UDPGothic", sans-serif;
 }
 
@@ -121,7 +111,7 @@ img.count{
     border-radius: 12px;
     margin: 10px;
     padding: 10px;
-    border: 1px solid #5ed9ff;
+    border: 2px solid #5ed9ff;
     background-color: #ffffff;
 }
 
@@ -129,20 +119,13 @@ img.count{
     padding: 0 0 10px 10px;
     margin: 0;
     font-size: 30px;
-    font-family: "DotGothic16", sans-serif;
+    font-family: "BIZ UDPMincho", serif;
 } 
-
-h1.main-title {
-    padding: 0 0 10px 10px;
-    margin: 0;
-    font-size: 40px;
-    font-family: "DotGothic16", sans-serif;
-}
 
 .main h2{
     padding: 10px 0 0 10px;
     margin: 0px;
-    font-family: "DotGothic16", sans-serif;
+    font-family: "BIZ UDPMincho", serif;
 } 
 
 #welcom{

@@ -1,0 +1,12 @@
+[
+    {
+        "title": "test", 
+        "date": "2025-07-11",
+        "category": "test",
+        "tags": ["バイク", "旅"],
+        "summary": "this is test blog",
+        "thumbnail": "./thumbnail/test.JPG",
+        "url": "./article/test",
+        "published": true
+    }
+]
