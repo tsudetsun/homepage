@@ -1,10 +1,137 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>TΔTのプロフィール</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <p>準備中</p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>TΔTのプロフィール</title>
+        <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=DotGothic16&family=Hachi+Maru+Pop&family=Kosugi+Maru&display=swap&family=BIZ+UDPGothic&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header"></div>
+        <script>
+            fetch('header.html')
+                .then(res => res.text())
+                .then(html => document.getElementById('header').innerHTML = html);
+        </script>
+        <div id="sub"></div>
+        <script>
+            // ヘッダーを読み込む
+            fetch('header.html')
+                .then(res => res.text())
+                .then(html => document.getElementById('header').innerHTML = html);
+
+            // 目次データを定義
+        const tocItems = [
+            { text: "基本情報", href: "#basic-information" },
+            { text: "写真撮影", href: "#photo" },
+            { text: "バイク旅", href: "#bike" },
+            { text: "動画投稿", href: "#video" },
+            { text: "イラスト作成", href: "#illust" },
+            { text: "ゲーム", href: "#game" },
+            { text: "名前の由来", href: "#name-origin" }
+        ];
+
+            // サブ（目次など）を読み込む
+            fetch('sub.html')
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('sub').innerHTML = html;
+                    // 目次を挿入
+                    const ul = document.getElementById('toc');
+                    if (ul && tocItems) {
+                        tocItems.forEach(item => {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.href = item.href;
+                            a.textContent = item.text;
+                            li.appendChild(a);
+                            ul.appendChild(li);
+                        });
+                    }
+                });
+        </script>
+
+        <div class="main">
+            <h1 class="main-title">プロフィール</h1>
+            <section id="basic-information">
+                <h1>基本情報</h1>
+                <p>
+                    名前: TΔT (つでつん)<br>
+                    年齢: 比較的若い<br>
+                    在住: 四国
+                </p>
+            </section>
+            <section id="hobbies">
+                <h1>趣味</h1>
+                <section class="content" id="photo">
+                    <div>
+                        <h2>写真撮影</h2>
+                        <p>
+                            普段から多くの写真を撮影しています。主に風景の写真を撮っています。<br>
+                            使用機材: D7000
+                            
+                        </p>
+                    </div>
+                    <img src="./images/hobbies_photo.JPG" alt="彼岸花の写真">
+                </section>
+                <section class="content" id="bike">
+                    <div>
+                        <h2>バイク旅</h2>
+                        <p>
+                        月1くらいでバイクでの小旅行を堪能しています。その際に写真を多く撮影しています。<br>
+                        愛車: CT125 ハンターカブ (2019)
+                        </p>
+                    </div>
+                    <img src="./images/hobbies_bike.JPG" alt="バイクと桜">
+                </section>
+                <section class="content" id="video">
+                    <div>
+                        <h2>動画投稿</h2>
+                        <p>
+                            主に実況動画と劇場動画を作っています。
+                        </p>
+                    </div>
+                    <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm41905301/script?w=320&h=180"></script><noscript><a href="https://www.nicovideo.jp/watch/sm41905301">電車で帰ったときのこと</a></noscript>
+                </section>
+                <section class="content" id="illust">
+                    <div>
+                        <h2>イラスト作成</h2>
+                        <p>
+                            ソフトウェアトークの二次創作を主軸にイラストを描いています。<br>
+                            pixiv: <a href="https://www.pixiv.net/users/74672596" target="_blank">TΔT</a><br>
+                            ニコニコ静画: <a href="https://seiga.nicovideo.jp/user/illust/121387131" target="_blank">TΔT</a>
+                        </p>
+                    </div>
+                    <img src="./images/hobbies_illust.jpg" alt="東北きりたんのイラスト">
+                </section>
+                <section class="content" id="game">
+                    <div>
+                        <h2>ゲーム</h2>
+                        <p>
+                            主にminecraftなどのサンドボックスゲームを遊んでいます。たまに他ジャンルも遊びます。<br>
+                            よく遊ぶゲーム: <br>
+                            ・minecraft<br>
+                            ・OpenTTD<br>
+                            ・Cities: Skylines<br>
+                            ・Kerbal Space Program<br>
+                        </p>
+                    </div>
+                    <img src="./images/hobbies_game.jpg" alt="minecraftのスクリーンショット">
+                </section>
+            </section>
+            <section id="name-origin">
+                <h1>名前の由来</h1>
+                <p>
+                    私は「TΔT」と書き「つでつん」と読みますが、この成り立ちがわからないと思います。その成り立ちは意外にシンプルなものです。<br>
+                    <br>
+                    TΔT → ティーデルタティー → ティデティ → ツデツ → つでつん<br>
+                    <br>
+                    このように、文字をそのまま読んだところから変形させていきました。
+                </p>
+            </section>
+        </div>
+        <div id="footer">
+            <p class="gotop"><a href="#top">ページトップに戻る</a></p>
+            <p class="license">© 2025 TΔT</p>
+        </div>
+    </body>
 </html>
