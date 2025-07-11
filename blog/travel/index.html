@@ -13,46 +13,6 @@
         <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=DotGothic16&family=Hachi+Maru+Pop&family=Kosugi+Maru&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="header"></div>
-        <script>
-            fetch('header.html')
-                .then(res => res.text())
-                .then(html => document.getElementById('header').innerHTML = html);
-        </script>
-        <div id="sub"></div>
-        <script>
-            // ヘッダーを読み込む
-            fetch('header.html')
-                .then(res => res.text())
-                .then(html => document.getElementById('header').innerHTML = html);
-
-            // 目次データを定義
-            const tocItems = [
-                { text: "ようこそ", href: "#welcom" },
-                { text: "更新履歴", href: "#record" },
-                { text: "ブログ", href: "#blog" },
-                { text: "免責事項", href: "#disclaimer" },
-                { text: "お問い合わせ", href: "#contact" }
-            ];
-
-            // サブ（目次など）を読み込む
-            fetch('sub.html')
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById('sub').innerHTML = html;
-                    // 目次を挿入
-                    const ul = document.getElementById('toc');
-                    if (ul && tocItems) {
-                        tocItems.forEach(item => {
-                            const li = document.createElement('li');
-                            const a = document.createElement('a');
-                            a.href = item.href;
-                            a.textContent = item.text;
-                            li.appendChild(a);
-                            ul.appendChild(li);
-                        });
-                    }
-                });
-        </script>
+        <p>準備中</p>
     </body>
 </html>
